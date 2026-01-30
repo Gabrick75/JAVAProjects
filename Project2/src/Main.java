@@ -1,16 +1,18 @@
-void main() {
-    byte age;
+import java.util.Scanner;
+import poo.Age;
 
-    System.out.println("Qual a sua idade?");
-    Scanner getAge = new Scanner(System.in);
-    age = getAge.nextByte();
-    //passar para metodo
-    if(age < 18){
-        System.out.println("Menor de Idade");
-    } else if (age <= 65) {
-        System.out.println("Idade Ativa");
-    } else {
-        System.out.println("Aposentado");
+public class Main {
+    public static void main(String[] args) {
+        byte age;
+
+        System.out.println("Qual a sua idade?");
+        Scanner getAge = new Scanner(System.in);
+        age = getAge.nextByte();
+
+        if (age < 0) {
+            System.out.println("Idade inválida! Não pode ser negativa.");
+            return; // encerra o programa
+        }
+        Age.checkAge(age);
     }
-    System.out.println("A sua idade é: " + age);
 }
