@@ -1,13 +1,24 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+    String name;
+    byte age;
+    double height;
+    boolean job;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-    }
+    System.out.println("Qual é o seu nome?");
+    Scanner getName = new Scanner(System.in);
+    name = getName.nextLine();
+    System.out.println("Qual é a sua idade?");
+    Scanner getAge = new Scanner(System.in);
+    age = getAge.nextByte();
+    System.out.println("Qual é a sua altura?");
+    Scanner getHeight = new Scanner(System.in);
+    height = getHeight.nextDouble();
+    System.out.println("Você está empregado?");
+    Scanner getJob = new Scanner(System.in);
+    job = getJob.nextBoolean();
+
+    System.out.printf(
+            "Nome: %s%nIdade: %d%nAltura: %.2f%nEmpregado: %b%n",
+            name, age, height, job
+    );
 }
