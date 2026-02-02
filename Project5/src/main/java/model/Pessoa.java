@@ -9,9 +9,14 @@ public class Pessoa {
 
     public Pessoa(String nome, int idade, double altura, Endereco endereco) {
         this.nome = nome;
-        this.idade = idade;
-        this.altura = altura;
+        setIdade(idade);
+        setAltura(altura);
         this.endereco = endereco;
+    }
+
+    @Override
+    public String toString() {
+        return nome + " - " + idade + " anos - " + endereco.getCidade();
     }
 
 
