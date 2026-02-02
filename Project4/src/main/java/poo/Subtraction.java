@@ -1,9 +1,9 @@
 package poo;
 
-public class Sum {
-    public static void somar() {
+public class Subtraction {
+    public static void subtrair() {
         IO.println("");
-        IO.println("Bem vindo a tela de soma!");
+        IO.println("Bem vindo a tela de subtração!");
 
         IO.println("Digite o primeiro numero:");
         int numero1 = Input.SCANNER.nextInt();
@@ -11,11 +11,10 @@ public class Sum {
         IO.println("Digite o segundo numero:");
         int numero2 = Input.SCANNER.nextInt();
 
-        int soma = numero1 + numero2;
+        int soma = numero1 - numero2;
 
-        IO.println("A soma de seus numeros deu: " + soma);
+        IO.println("A subtração de seus numeros deu: " + soma);
 
         IO.println("");
-
     }
 }

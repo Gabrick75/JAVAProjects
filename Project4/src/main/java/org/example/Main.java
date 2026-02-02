@@ -4,6 +4,13 @@ import poo.Intro;
 
 public class Main {
     static void main() {
-        Intro.options();
+
+        boolean executar = true;
+
+        while (executar) {
+            executar = Intro.options();
+        }
+
+        IO.println("Programa encerrado");
     }
 }
