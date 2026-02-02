@@ -1,15 +1,17 @@
-package poo;
+package model;
 
 public class Pessoa {
 
+    private Endereco endereco;
     private String nome;
     private int idade;
     private double altura;
 
-    public Pessoa(String nome, int idade, double altura) {
+    public Pessoa(String nome, int idade, double altura, Endereco endereco) {
         this.nome = nome;
         this.idade = idade;
         this.altura = altura;
+        this.endereco = endereco;
     }
 
 
@@ -45,4 +47,7 @@ public class Pessoa {
         this.altura = altura;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
 }
