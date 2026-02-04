@@ -1,5 +1,7 @@
 package model;
 
+import exception.DadosInvalidosException;
+
 public class Pessoa {
 
     private Endereco endereco;
@@ -38,6 +40,7 @@ public class Pessoa {
     public void setIdade(int idade) {
         if (idade < 0) {
             throw new IllegalArgumentException("Idade inválida");
+
         }
         this.idade = idade;
     }
