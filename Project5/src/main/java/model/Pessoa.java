@@ -57,4 +57,13 @@ public class Pessoa {
     public Endereco getEndereco() {
         return endereco;
     }
+    public FaixaEtaria getFaixaEtaria() {
+        if (idade < 18) {
+            return FaixaEtaria.MENOR;
+        }
+        if (idade < 65) {
+            return FaixaEtaria.ADULTO;
+        }
+        return FaixaEtaria.IDOSO;
+    }
 }

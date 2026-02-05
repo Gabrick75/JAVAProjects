@@ -25,5 +25,13 @@ public class Main {
         for (Pessoa p : cadastro.listarMaioresDeIdade()) {
             System.out.println(p);
         }
+
+        System.out.println("\n=== Faixa Etária ===");
+        for (Pessoa p : cadastro.listarPessoas()) {
+            System.out.println(
+                    p.getNome() + " - " + p.getFaixaEtaria()
+            );
+        }
+
     }
 }
