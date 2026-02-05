@@ -39,8 +39,7 @@ public class Pessoa {
     }
     public void setIdade(int idade) {
         if (idade < 0) {
-            throw new IllegalArgumentException("Idade inválida");
-
+            throw new DadosInvalidosException("Idade inválida");
         }
         this.idade = idade;
     }
@@ -50,7 +49,7 @@ public class Pessoa {
     }
     public void setAltura(double altura) {
         if (altura <= 0) {
-            throw new IllegalArgumentException("Altura inválida");
+            throw new DadosInvalidosException("Altura inválida");
         }
         this.altura = altura;
     }

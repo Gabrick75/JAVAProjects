@@ -1,4 +1,5 @@
 package model;
+import exception.DadosInvalidosException;
 
 public class Endereco {
 
@@ -9,15 +10,15 @@ public class Endereco {
     public Endereco(String rua, int numero, String cidade) {
 
         if (rua == null || rua.isBlank()) {
-            throw new IllegalArgumentException("Rua inválida");
+            throw new DadosInvalidosException("Rua inválida");
         }
 
         if (numero <= 0) {
-            throw new IllegalArgumentException("Número deve ser maior que zero");
+            throw new DadosInvalidosException("Número deve ser maior que zero");
         }
 
         if (cidade == null || cidade.isBlank()) {
-            throw new IllegalArgumentException("Cidade inválida");
+            throw new DadosInvalidosException("Cidade inválida");
         }
 
         this.rua = rua;
